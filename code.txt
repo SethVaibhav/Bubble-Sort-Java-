@@ -1,0 +1,40 @@
+//Time complexity-O(n^2)
+
+package dataStructures;
+
+import java.util.Scanner;
+
+public class BubbleSort {
+
+	public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter the no of terms in array");
+		int n=sc.nextInt();
+		System.out.println("Enter the terms of array");
+		int a[]= new int[n];
+		for(int i=0;i<n;i++)
+		{
+			a[i]=sc.nextInt();
+		}
+for (int i=0;i<n-1;i++)
+{
+	boolean sort=true;
+	for(int j=0;j<n-1-i;j++)
+	{
+		if(a[j+1]<a[j])
+{
+	int temp=a[j+1];
+	a[j+1]=a[j];
+	a[j]=temp;
+	
+	sort=false;
+	   }
+	if(sort) break;	
+	}
+	System.out.println(a[i]);
+	
+}
+
+	}
+
+}
